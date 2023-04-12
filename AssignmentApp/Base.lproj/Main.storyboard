@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -84,7 +85,7 @@
         <!--Login-->
         <scene sceneID="UYp-hT-tu2">
             <objects>
-                <viewController id="XeU-9c-noH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XeU-9c-noH" customClass="LoginViewController" customModule="AssignmentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NZP-cS-Tnz">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,6 +101,9 @@
                                     <color key="baseForegroundColor" red="0.86666667460000002" green="0.63921570780000003" blue="0.77254903320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.99215686270000003" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="XeU-9c-noH" eventType="touchUpInside" id="KfR-hz-DFh"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mgr-NH-LfC">
                                 <rect key="frame" x="30" y="255" width="333" height="40"/>
@@ -142,6 +146,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" largeTitleDisplayMode="always" id="gY4-JK-jkO"/>
+                    <connections>
+                        <outlet property="notificationLabel" destination="YUT-0F-znZ" id="5pX-xo-1sV"/>
+                        <outlet property="passwordTextField" destination="3Ml-C3-PVh" id="64x-qG-125"/>
+                        <outlet property="usernameTextField" destination="Mgr-NH-LfC" id="B3w-6b-ie2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZn-Nh-RRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,7 +178,7 @@
         <!--Register-->
         <scene sceneID="veP-1o-00F">
             <objects>
-                <viewController id="qKv-Ki-Lgd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qKv-Ki-Lgd" customClass="RegisterViewController" customModule="AssignmentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Cl-te-yCB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,6 +210,9 @@
                                     <color key="baseForegroundColor" red="0.86666667460000002" green="0.63921570780000003" blue="0.77254903320000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="baseBackgroundColor" red="0.99215686270000003" green="0.95686274510000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="qKv-Ki-Lgd" eventType="touchUpInside" id="BiF-cg-daI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter details to register:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iym-wg-I7r">
                                 <rect key="frame" x="20" y="495" width="353" height="20.333333333333371"/>
@@ -238,10 +250,45 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Register" largeTitleDisplayMode="always" id="LD7-hL-3ap"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="G7o-w0-8Wl" id="KMQ-fX-HXf"/>
+                        <outlet property="passwordTextField" destination="fqv-jb-iIz" id="QWk-u6-OVs"/>
+                        <outlet property="registerInfoLabel" destination="Iym-wg-I7r" id="cAN-Gb-Bxk"/>
+                        <outlet property="usernameTextField" destination="Czi-kx-Ccg" id="tcI-up-3QX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPT-vC-GTQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2705" y="4"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="2gx-OY-VUp">
+            <objects>
+                <viewController storyboardIdentifier="UserVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="F54-fd-3JL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Z4-Nz-7iA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="logged in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeC-bw-XYk">
+                                <rect key="frame" x="175" y="309" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KHf-7b-jEC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNo-jM-gDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3434" y="4"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
