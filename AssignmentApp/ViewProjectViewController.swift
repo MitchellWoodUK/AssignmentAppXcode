@@ -8,11 +8,11 @@ class ViewProjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchProjectDetails(forUserId: UserData.shared.currentUser!.id)
+        //fetchProjectDetails(forUserId: UserData.shared.currentUser!.id)
 
         // Do any additional setup after loading the view.
     }
-    
+    /*
     func fetchProjectDetails(forUserId userId: Int) {
         let apiUrl = "http://127.0.0.1:5000/api/projects/get/details/byuserid?userid=\(userId)"
         
@@ -102,7 +102,7 @@ struct ProjectData {
         self.start_date = start_date
         self.end_date = end_date
         self.user_name = userName
-    }
+    }*/
 }
 
 
