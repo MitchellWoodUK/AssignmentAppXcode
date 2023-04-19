@@ -16,6 +16,7 @@
 		A838FCA029E6BCF200448E00 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A838FC9F29E6BCF200448E00 /* RegisterViewController.swift */; };
 		A838FCA229E6C2CC00448E00 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A838FCA129E6C2CC00448E00 /* LoginViewController.swift */; };
 		A838FCA429E6C3A900448E00 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A838FCA329E6C3A900448E00 /* UserData.swift */; };
+		A838FCAC29F01E1400448E00 /* NewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A838FCAB29F01E1400448E00 /* NewProjectViewController.swift */; };
 		D34F063129EFEA6A0069E792 /* ViewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34F063029EFEA690069E792 /* ViewProjectViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		A838FC9F29E6BCF200448E00 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A838FCA129E6C2CC00448E00 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A838FCA329E6C3A900448E00 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		A838FCAB29F01E1400448E00 /* NewProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectViewController.swift; sourceTree = "<group>"; };
 		D34F063029EFEA690069E792 /* ViewProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProjectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				A838FCA129E6C2CC00448E00 /* LoginViewController.swift */,
 				A838FCA329E6C3A900448E00 /* UserData.swift */,
 				D34F063029EFEA690069E792 /* ViewProjectViewController.swift */,
+				A838FCAB29F01E1400448E00 /* NewProjectViewController.swift */,
 			);
 			path = AssignmentApp;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A838FCA429E6C3A900448E00 /* UserData.swift in Sources */,
+				A838FCAC29F01E1400448E00 /* NewProjectViewController.swift in Sources */,
 				A838FC9029E69F4500448E00 /* ViewController.swift in Sources */,
 				A838FC8C29E69F4500448E00 /* AppDelegate.swift in Sources */,
 				D34F063129EFEA6A0069E792 /* ViewProjectViewController.swift in Sources */,

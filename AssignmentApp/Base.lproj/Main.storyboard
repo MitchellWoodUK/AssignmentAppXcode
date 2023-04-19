@@ -333,7 +333,7 @@
         <!--Add New-->
         <scene sceneID="wr7-jC-FcT">
             <objects>
-                <viewController id="flu-ev-l8c" sceneMemberID="viewController">
+                <viewController id="flu-ev-l8c" customClass="NewProjectViewController" customModule="AssignmentApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4a4-M0-g7B">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -364,7 +364,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="nN2-Ia-UKB">
-                                        <rect key="frame" x="10" y="330" width="373" height="34"/>
+                                        <rect key="frame" x="10" y="330" width="373" height="34.333333333333314"/>
                                     </datePicker>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sQ-Zy-xpp">
                                         <rect key="frame" x="20" y="286" width="353" height="24"/>
