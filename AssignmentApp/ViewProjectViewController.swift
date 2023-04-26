@@ -12,52 +12,45 @@ class ViewProjectViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    /*
+    
     func fetchProjectDetails(forUserId userId: Int) {
-        let apiUrl = "http://127.0.0.1:5000/api/projects/get/details/byuserid?userid=\(userId)"
-        
-        guard let url = URL(string: apiUrl) else {
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let url = URL(string: "https://example.com/api/projects/get/details/byuserid?userid=\(userId)")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
-                print("Error: \(error)")
-                return
-            }
-            
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200..<300).contains(httpResponse.statusCode) else {
-                print("Error: Invalid response")
-                return
-            }
-            
-            guard let data = data else {
-                print("Error: No data received")
-                return
-            }
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                
-                if let projectDetails = json?["project_details"] as? [[String: Any]] {
-                    let projects = projectDetails.compactMap { ProjectData(json: $0) }
-                    
-                    DispatchQueue.main.async {
-                        self.addTextForProjects(projects: projects)
+                print("Error: \(error.localizedDescription)")
+            } else if let data = data,
+                        let response = response as? HTTPURLResponse,
+                        response.statusCode == 200 {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                    if let exerciseDetails = json?["exercise_details"] as? [[String: Any]] {
+                        for exercise in exerciseDetails {
+                            let exerciseName = exercise["exercise_name"] as? String
+                            let userName = exercise["user_name"] as? String
+                            let durationMinutes = exercise["duration_minutes"] as? Int
+                            let dateCompleted = exercise["date_completed"] as? String
+                            // Handle the exercise details here
+                        }
                     }
-                } else {
-                    DispatchQueue.main.async {
-                        self.textView.text = "No projects found for the specified user ID!"
-                    }
+                } catch {
+                    print("Error decoding JSON response: \(error.localizedDescription)")
                 }
-            } catch {
-                print("Error: \(error)")
+            } else {
+                print("Unexpected response: \(response.debugDescription)")
             }
         }
-        
+
         task.resume()
     }
+    
+    
+    
+    
+    
+    
     
     func addTextForProjects(projects: [ProjectData]) {
         var projectText = ""
@@ -102,7 +95,7 @@ struct ProjectData {
         self.start_date = start_date
         self.end_date = end_date
         self.user_name = userName
-    }*/
+    }
 }
 
 
