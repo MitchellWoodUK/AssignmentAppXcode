@@ -1,13 +1,10 @@
 
 import UIKit
 
-class ViewProjectViewController: UICollectionViewController {
+class ViewProjectViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
     
-    
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
     
     var projects: [Project] = []
     
@@ -23,16 +20,31 @@ class ViewProjectViewController: UICollectionViewController {
                 //appends the results to the array.
                 self.projects.append(contentsOf: results)
                 print(results)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             case .failure(let error):
                 print(error)
             }
         }
         
     }
+}
+    
+extension ViewProjectViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        projects.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = projects[indexPath.row].name
+        return cell
+    }
+}
+    
     
 
-    
-}
+
     
 
     
