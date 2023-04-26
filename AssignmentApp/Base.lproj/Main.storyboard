@@ -428,7 +428,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                 <connections>
-                                                    <action selector="registerButtonPressed:" destination="flu-ev-l8c" eventType="touchUpInside" id="DPO-Ua-yAP"/>
+                                                    <action selector="addProjectButtonPressed:" destination="flu-ev-l8c" eventType="touchUpInside" id="d5T-NI-l6v"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill in the above details!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rl2-OK-SEd">
@@ -461,11 +461,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add New" image="pencil" catalog="system" id="Hie-Om-IEr"/>
                     <connections>
-                        <outlet property="descriptionField" destination="gN2-Yl-G4Q" id="nED-JU-trd"/>
-                        <outlet property="endDateField" destination="TTh-qS-SWk" id="UEs-Fi-Xzl"/>
-                        <outlet property="errorLabel" destination="rl2-OK-SEd" id="0r1-YP-DDy"/>
-                        <outlet property="nameField" destination="XmT-9J-nD7" id="8bW-9x-bpG"/>
-                        <outlet property="startDateField" destination="8F5-qg-mH0" id="mtK-tB-e0U"/>
+                        <outlet property="endDate" destination="TTh-qS-SWk" id="NBr-Ty-71R"/>
+                        <outlet property="errorLabel" destination="rl2-OK-SEd" id="DNU-st-UPj"/>
+                        <outlet property="projectDescription" destination="gN2-Yl-G4Q" id="NrM-uc-6Sl"/>
+                        <outlet property="projectName" destination="XmT-9J-nD7" id="wd5-0z-D6s"/>
+                        <outlet property="startDate" destination="8F5-qg-mH0" id="4Ta-s7-uW0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMY-7f-fJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
