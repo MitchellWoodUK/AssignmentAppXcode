@@ -37,7 +37,7 @@ extension ViewProjectViewController : UITableViewDelegate, UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = projects[indexPath.row].name
+        cell.textLabel?.text = projects[indexPath.row].name + projects[indexPath.row].description
         return cell
     }
 }
