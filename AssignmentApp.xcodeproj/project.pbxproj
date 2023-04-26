@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8066A9A29F93394006EE27F /* URLSessionCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8066A9929F93394006EE27F /* URLSessionCalls.swift */; };
+		A8066A9D29F93425006EE27F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8066A9C29F93425006EE27F /* Project.swift */; };
 		A838FC8C29E69F4500448E00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A838FC8B29E69F4500448E00 /* AppDelegate.swift */; };
 		A838FC8E29E69F4500448E00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A838FC8D29E69F4500448E00 /* SceneDelegate.swift */; };
 		A838FC9029E69F4500448E00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A838FC8F29E69F4500448E00 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A8066A9929F93394006EE27F /* URLSessionCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionCalls.swift; sourceTree = "<group>"; };
+		A8066A9C29F93425006EE27F /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		A838FC8829E69F4500448E00 /* AssignmentApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A838FC8B29E69F4500448E00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A838FC8D29E69F4500448E00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8066A9B29F93403006EE27F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8066A9C29F93425006EE27F /* Project.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A838FC7F29E69F4500448E00 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +78,7 @@
 		A838FC8A29E69F4500448E00 /* AssignmentApp */ = {
 			isa = PBXGroup;
 			children = (
+				A8066A9B29F93403006EE27F /* Models */,
 				A838FC8B29E69F4500448E00 /* AppDelegate.swift */,
 				A838FC8D29E69F4500448E00 /* SceneDelegate.swift */,
 				A838FC8F29E69F4500448E00 /* ViewController.swift */,
@@ -75,9 +88,10 @@
 				A838FC9929E69F4600448E00 /* Info.plist */,
 				A838FC9F29E6BCF200448E00 /* RegisterViewController.swift */,
 				A838FCA129E6C2CC00448E00 /* LoginViewController.swift */,
-				A838FCA329E6C3A900448E00 /* UserData.swift */,
 				D34F063029EFEA690069E792 /* ViewProjectViewController.swift */,
+				A838FCA329E6C3A900448E00 /* UserData.swift */,
 				A838FCAB29F01E1400448E00 /* NewProjectViewController.swift */,
+				A8066A9929F93394006EE27F /* URLSessionCalls.swift */,
 			);
 			path = AssignmentApp;
 			sourceTree = "<group>";
@@ -155,6 +169,8 @@
 			files = (
 				A838FCA429E6C3A900448E00 /* UserData.swift in Sources */,
 				A838FCAC29F01E1400448E00 /* NewProjectViewController.swift in Sources */,
+				A8066A9A29F93394006EE27F /* URLSessionCalls.swift in Sources */,
+				A8066A9D29F93425006EE27F /* Project.swift in Sources */,
 				A838FC9029E69F4500448E00 /* ViewController.swift in Sources */,
 				A838FC8C29E69F4500448E00 /* AppDelegate.swift in Sources */,
 				D34F063129EFEA6A0069E792 /* ViewProjectViewController.swift in Sources */,
