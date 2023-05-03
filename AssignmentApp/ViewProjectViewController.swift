@@ -10,9 +10,11 @@ class ViewProjectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //userid to find the correct projects.
+        let userId = UserData.shared.currentUser!.id
+        print(userId)
         //Create the url object with the API endpoint.
-        let url = URL(string: "http://127.0.0.1:5000/api/projects/get/all")!
+        let url = URL(string: "http://127.0.0.1:5000/api/projects/get/byuserid?id=\(userId)")!
         //Pass in the URL that will be executed when the fetch completes. Outputs a result if successful.
         URLSession.shared.fetchData(for: url) { (result: Result<[Project], Error>) in
             switch result {
@@ -27,7 +29,6 @@ class ViewProjectViewController: UIViewController {
                 print(error)
             }
         }
-        
     }
 }
     
@@ -35,18 +36,24 @@ extension ViewProjectViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         projects.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = projects[indexPath.row].name + projects[indexPath.row].description
+        cell.textLabel?.text = projects[indexPath.row].name + " - " + projects[indexPath.row].description
+        cell.detailTextLabel?.text = "Due: " + projects[indexPath.row].end_date
+   
         return cell
     }
+    
+    //When a cell is selected.
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Get the selected project
+        let project = projects[indexPath.row]
+        // Navigate to the project details view controller
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let projectDetailsVC = storyboard.instantiateViewController(withIdentifier: "projectDetailsVC") as! ProjectDetailsViewController
+        projectDetailsVC.project = project
+        navigationController?.pushViewController(projectDetailsVC, animated: true)
+        
+    }
 }
-    
-    
-
-
-    
-
-    
-
-
