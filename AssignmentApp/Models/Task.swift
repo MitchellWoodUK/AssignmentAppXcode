@@ -1,5 +1,5 @@
 import Foundation
-
+//Task struct, containing all properties needed by the database.
 struct Task: Codable, Identifiable {
     let id : Int
     let name : String

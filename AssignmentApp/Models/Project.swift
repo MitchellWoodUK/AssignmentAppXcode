@@ -1,12 +1,5 @@
-//
-//  Project.swift
-//  AssignmentApp
-//
-//  Created by Mitchell Wood (Student) on 26/04/2023.
-//
-
 import Foundation
-
+//Project struct, containing all properties needed by the database.
 struct Project : Codable, Identifiable{
     let id: Int
     let name: String
@@ -14,6 +7,4 @@ struct Project : Codable, Identifiable{
     let start_date: String
     let end_date: String
     let user_id: Int
-  
-    
 }
